@@ -46,7 +46,8 @@ The client is located in the `/client` directory and requires environment config
 
    ```bash
    npm install --legacy-peer-deps
-   npm run dev
+   npm run build
+   npm run start
    ```
 
    The client application will be accessible at `http://localhost:3000`.
@@ -71,7 +72,8 @@ The QR component is located in the `/qr` directory and follows a similar setup p
 
    ```bash
    npm install
-   npm run dev
+   npm run build
+   npm run start
    ```
 
   The QR application will be accessible at `http://localhost:3000`.
@@ -81,6 +83,5 @@ The QR component is located in the `/qr` directory and follows a similar setup p
 - Ensure Docker and Docker Compose are running before starting the server.
 - Verify that the `.env` files in both `/client` and `/qr` are correctly configured for your environment.
 - If you encounter issues, check the Docker container logs using `docker compose logs` for server-side troubleshooting.
-- The Client and QR will run in development mode.
 
 
