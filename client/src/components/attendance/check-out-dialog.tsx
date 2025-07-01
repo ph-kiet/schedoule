@@ -42,7 +42,7 @@ export default function CheckOutDialog({
       return;
     }
 
-    setText(data.message);
+    setText(`Checked out successfully at ${format(new Date(), "HH:mm")}`);
     toast.success(data.message, { position: "bottom-center" });
   };
 
