@@ -95,7 +95,7 @@ export const checkIn = async (req: Request, res: Response) => {
 
     res.status(200).json({
       ok: true,
-      message: `Checked in successfully at ${format(checkedInDate, "HH:mm")}`,
+      message: `Checked in successfully at ${format(attendance.checkInDate, "HH:mm")}`,
     });
   } catch (error: any) {
     console.log(error);
@@ -189,7 +189,7 @@ export const checkOut = async (req: Request, res: Response) => {
 
     res.status(200).json({
       ok: true,
-      message: `Checked out successfully at ${format(checkedOutDate, "HH:mm")}`,
+      message: `Checked out successfully at ${format(attendance.checkOutDate, "HH:mm")}`,
     });
   } catch (error: any) {
     console.log(error);
