@@ -4,6 +4,7 @@ import CheckOutDialog from "@/components/attendance/check-out-dialog";
 import { Button } from "@/components/ui/button";
 import { Spinner } from "@/components/ui/spinner";
 import { useDisclosure } from "@/hooks/use-disclosure";
+import { format } from "date-fns";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useRef, useState } from "react"; // Import useRef
@@ -47,7 +48,7 @@ export default function Page() {
       return;
     }
 
-    setText(data.message);
+    setText(`Checked in successfully at ${format(new Date(), "HH:mm")}`);
     toast.success(data.message, { position: "bottom-center" });
   };
 
