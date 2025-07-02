@@ -41,9 +41,12 @@ export default function CheckOutDialog({
       toast.error(data.error.message, { position: "bottom-center" });
       return;
     }
-
-    setText(`Checked out successfully at ${format(new Date(), "HH:mm")}`);
-    toast.success(data.message, { position: "bottom-center" });
+    let returnString = `Checked out successfully at ${format(
+      new Date(),
+      "HH:mm"
+    )}`;
+    setText(returnString);
+    toast.success(returnString, { position: "bottom-center" });
   };
 
   return (

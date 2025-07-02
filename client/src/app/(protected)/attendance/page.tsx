@@ -47,9 +47,12 @@ export default function Page() {
       onToggle();
       return;
     }
-
-    setText(`Checked in successfully at ${format(new Date(), "HH:mm")}`);
-    toast.success(data.message, { position: "bottom-center" });
+    let returnString = `Checked in successfully at ${format(
+      new Date(),
+      "HH:mm"
+    )}`;
+    setText(returnString);
+    toast.success(returnString, { position: "bottom-center" });
   };
 
   return (
